@@ -1,8 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Web3 Dapp
 
-## Getting Started
+## Features
 
-First, run the development server:
+### Wallet Connection and Account Management
+
+- **Connect Wallet**: Users can connect their Ethereum-compatible wallet to the app using the Wagmi library.
+- **Account Details**: Displays connected wallet information, including the account address and token balance.
+- **Auto Refresh**: The `AccountDetails` component refreshes automatically on certain events, ensuring up-to-date account information.
+
+### Token Interactions
+
+- **Mint Token**: Allows the user to mint new tokens, with a callback to update the state upon successful minting.
+- **Token Balance Display**: The `TokenDisplayComponent` shows the current token balance of the connected account, refreshing automatically as the balance changes.
+- **Transfer Token**: Enables transferring tokens from the connected account to other addresses.
+- **Approve Spending**: The `ApproveComponent` lets the user grant permission to a third party to spend tokens on their behalf.
+- **Allowance Check**: The `AllowanceComponent` displays the approved allowance for a specific spender address.
+- **Transfer From Another Account**: The `TransferFromComponent` allows tokens to be transferred from one account to another if allowance is set.
+
+### Token Management
+
+- **Burn Token**: Allows the connected account to burn (destroy) a specified amount of tokens.
+- **Burn Token From Another Account**: Enables burning tokens from a different account if allowance is set.
+- **Pause and Unpause**: The `PauseUnpauseComponent` lets the admin pause or unpause token transfers, useful for temporary restrictions.
+
+### Transaction and Event Tracking
+
+- **Transaction History**: Displays the transaction history of the connected account, automatically refreshing when state changes occur.
+- **Event Log**: The `EventLogComponent` provides a log of token-related events, such as transfers and approvals, to help users track token activity.
+
+### Additional Features
+
+- **Automatic State Management**: State changes trigger component updates for a seamless and dynamic user experience.
+- **Responsive Layout**: Components are organized within responsive containers, providing a user-friendly interface across devices.
+
+### Getting Started
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone <repo-url>
+
+   ```
+
+1. **Running development server**
 
 ```bash
 npm run dev
@@ -13,24 +53,3 @@ pnpm dev
 # or
 bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
