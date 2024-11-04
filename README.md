@@ -1,4 +1,4 @@
-# Next.js Web3 Dapp
+# Erc 20 wallet Integration
 
 ## Features
 
